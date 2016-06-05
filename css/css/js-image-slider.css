@@ -1,0 +1,170 @@
+/* http://www.menucool.com */
+
+#sliderFrame, #sliderFrame div {
+    box-sizing: content-box;;
+}
+/*slider frame*/
+#sliderFrame {position:relative; background: none;margin:3%; }      
+
+#slider, #slider div.sliderInner {
+    width:100%;height: 400px;background:#fff;/* Must be the same size as the slider images */
+    max-width:1200px;min-width:250px;
+}
+
+#slider 
+{
+	background:transparent url(../imag/loading.gif) no-repeat 50% 50%;
+	box-shadow:0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+	position:relative;
+	margin:0 auto; /*center-aligned*/
+    transform: translate3d(0,0,0);
+}
+
+/* the link style (if slide image is wrapped in a link) */
+#slider a.imgLink, #slider .video {
+	z-index:2;
+	position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+}
+#slider	a {color:#fff;background:#7AB800; box-shadow:0 0 3px rgba(0,0,0,.20),0 3px 6px rgba(0,0,0,.40); border-radius: 6px;}
+#slider .video {
+	background:transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* Caption styles */
+/* Not set as each slide has no caption in this demo. */
+#slider div.navBulletsWrapper  {
+	top:10px;/* Its position is relative to the #slider */
+	right:0px;
+	text-align:center;
+	background:none;
+	position:relative;
+	z-index:5;
+}
+
+/* each bullet */
+#slider div.navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    font-size:0;color: #FF0000;/*hide the index number in the bullet element*/
+    background: url(../imag/bullet.png) no-repeat 0 0;
+    display:inline-block; *display:inline; zoom:1;
+    overflow:hidden;cursor:pointer;
+    margin:0 6px;/* set distance between each bullet*/
+}
+
+#slider div.navBulletsWrapper div.active {background-position:0 -11px;}
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+#slider div.mc-caption-bg, #slider div.mc-caption-bg2 {
+	position:absolute;
+	width:35%;max-width:600px;min-width:250px;
+	height:auto;
+	padding:10px 0;/* 10px will increase height.*/
+	left:50px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/	
+	top:80px; /*bottom:10px;if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
+	z-index:3;
+	overflow:hidden;
+	font-size:0;
+}
+#slider div.mc-caption-bg {
+    /* NOTE: Its opacity is to be set through the sliderOptions.captionOpacity setting in the js-image-slider.js file.*/
+	background:none;/* or any other colors such as Black, or: background:none; */
+	border:0px solid white;
+	border-radius: 5px;
+	opacity: 0.5;
+}
+#slider div.mc-caption-bg2 {
+    background:none;
+}
+#slider div.mc-caption {
+	font: 20px Arial;
+	color:#069;
+	z-index:4;
+	text-align:left;
+    background:none;
+	font-family: "TelefonicaIE", Verdana;
+}
+#slider div.mc-caption a { 
+	/*color:#060;*/
+	text-decoration:none;
+	padding: 1px 3px;	
+}
+
+/* --------- Others ------- */
+
+#slider div.loading 
+{
+    width:100%; height:100%;
+    background:transparent url(../imag/loading.gif) no-repeat 50% 50%;
+    filter: alpha(opacity=60);
+    opacity:0.6;
+    position:absolute;
+    left:0;
+    top:0; 
+    z-index:9;
+}
+
+#slider img, #slider>b, #slider a>b {
+	position:absolute; border:none; display:none;
+}
+
+#slider div.sliderInner {
+	overflow:hidden; 
+	-webkit-transform: rotate(0.000001deg);/* fixed the Chrome not crop border-radius bug*/
+	position:absolute; top:0; left:0;
+}
+
+#slider>a, #slider video, #slider audio {display:none;}
+#slider div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+
+
+
+/*----------- navigation buttons on both sides of the slider -----------*/
+.group1-Wrapper 
+{
+    position:absolute;
+    z-index:20;
+    top:120px;
+    margin-left:50%;/* position it in the middle of #sliderFrame */
+    width:1px;
+}
+a.group1-Prev, a.group1-Next
+{
+    width:50px;height:150px;
+    background:transparent url(../imag/navbuttons2.gif); 
+    display:block; 
+    cursor:pointer;
+    position:absolute;
+    top:0;
+    user-select: none;
+}
+a.group1-Prev{background-position:0 0; left: -510px;}
+a.group1-Next {background-position:0 -150px;left:460px;}
+
+a.group1-Prev:hover{background-position:50px 0;}
+a.group1-Next:hover {background-position:50px -150px;}
+
+
+/* ----------- navigation buttons in the nav bar ---------- */
+a.group2-Prev, a.group2-Next, a.group2-Play, a.group2-Pause 
+{
+    width:20px; height:20px; 
+    background:transparent url(../imag/navbuttons.gif); 
+    display:inline-block; 
+    *display:inline;zoom:1;/*IE hack*/
+    margin-left:4px; margin-right:4px;
+    cursor:pointer;
+}
+a.group2-Pause{background-position:0 0;}
+a.group2-Play {background-position:0 -20px;}
+a.group2-Next {background-position:0 -40px;}
+a.group2-Prev {background-position:0 -60px;} 
+
+a.group2-Pause:hover{background-position:20px 0;}
+a.group2-Play:hover {background-position:20px -20px;}
+a.group2-Next:hover {background-position:20px -40px;}
+a.group2-Prev:hover {background-position:20px -60px;} 
+

@@ -1,0 +1,161 @@
+#slides {
+width:100%;
+margin:0 auto; /*center aligned*/
+background: transparent;
+display: none
+}
+
+#slides .slidesjs-navigation {
+margin-top:5px;
+}
+
+a.slidesjs-next,
+a.slidesjs-previous,
+a.slidesjs-play,
+a.slidesjs-stop {
+background-image: url(../imag/navs.png);
+background-repeat: no-repeat;
+display:block;
+width:64px;
+height:64px;
+overflow: hidden;
+text-indent: -9999px;
+float: left;
+margin-right:5px;
+}
+
+a.slidesjs-next {
+margin-right:10px;
+background-position: -64px 0;
+}
+
+a:hover.slidesjs-next {
+background-position: -64px -64px;
+}
+
+a.slidesjs-previous {
+background-position: 0 0;
+}
+
+a:hover.slidesjs-previous {
+background-position: 0 -64px;
+}
+
+a.slidesjs-play {
+
+background-position: -64px -128px;
+}
+
+a:hover.slidesjs-play {
+background-position: -64px -128px;
+}
+
+a.slidesjs-stop {
+background-position: 0 -128px;
+}
+
+a:hover.slidesjs-stop {
+background-position: 0 -128px;
+}
+
+.slidesjs-pagination {
+margin:0 auto; /* center align */
+text-align:center;
+display:table;
+font-size:0;
+/* margin: 7px 0 0;*/
+float: right;
+list-style: none;
+}
+
+.slidesjs-pagination li {
+float: left;
+margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+display:inline-block;
+width: 10px;
+height: 10px;
+background-color: #CCCCCC;
+font-size:0;
+margin:2px 6px;
+cursor:pointer;
+border-radius:10px;
+box-shadow:inset 0 1px 3px #666666;
+
+/*display: block;
+width: 13px;
+height: 0;
+padding-top: 13px;
+background-image: url(img/pagination.png);
+background-position: 0 0;*/
+float: left;
+/*overflow: hidden;*/
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+background-color:#1293dc;
+box-shadow:inset 0 1px 3px -1px #28b4ea,0 1px 1px rgba(0,0,0,.5);
+background-image:linear-gradient(top,#1293dc,#0f6297);
+
+/*background-position: 0 -13px*/
+}
+
+.slidesjs-pagination li a:hover {
+opacity:0.6;
+}
+
+#slides a:link,
+#slides a:visited {
+color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+color: #9e2020
+}
+
+.navbar {
+overflow: hidden
+}
+/*End SlidesJS Optional
+
+SlidesJS Required: These styles are required if you'd like a responsive slideshow */
+
+#slides {
+display: none
+}
+
+.container {
+margin: 0 auto
+}
+
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+.container {
+width: auto
+}
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+.container {
+width: auto
+}
+}
+
+/* For smaller displays like laptops */
+@media (min-width: 768px) and (max-width: 979px) {
+.container {
+width: 724px
+}
+}
+
+/* For larger displays */
+@media (min-width: 1200px) {
+.container {
+width: 1170px
+}
+}
