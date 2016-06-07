@@ -26,7 +26,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 address{font-style:normal;}
 a img{border:0}
  article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
-header{background:#1f1f1f;border-top:3px solid #000;width:100%;z-index: 100;}
+header{background:#1f1f1f;border-top:3px solid #000;width:100%;z-index: 100;box-shadow: 0px 3px 5px rgba(0,0,0,0.5);}
 header h1{color:#F98383;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2.5em;}
 header p{color:#fff;font-family:kelvinchregular, Arial, sans-serif;font-weight:normal;font-size:.95em;}
 header .center{margin:0 auto;max-width:980px;}
