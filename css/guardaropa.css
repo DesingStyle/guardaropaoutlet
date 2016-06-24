@@ -21,17 +21,19 @@
     font-weight: normal;
     font-style: normal;
 }
+* {box-sizing: border-box;}
 body{background:#fff;color:#444;font-family:kelvinchregular, Arial, sans-serif;margin:0;padding:0;}
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,hgroup,menu,footer,header,main,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}
 address{font-style:normal;}
 a img{border:0}
  article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
-header{background:#1f1f1f;border-top:3px solid #000;width:100%;z-index: 100;box-shadow: 0px 3px 5px rgba(0,0,0,0.5);}
+header{background:#1f1f1f;border-top:3px solid #000;width:100%;z-index: 100;}
 header h1{color:#F98383;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2.5em;}
 header p{color:#fff;font-family:kelvinchregular, Arial, sans-serif;font-weight:normal;font-size:.95em;}
 header .center{margin:0 auto;max-width:980px;}
 header .logo {float:left;line-height:110px;padding:0 1em;}
 header .clear {clear:both;}
+h2{color:#000;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2em;text-align:center;}
 .clear {clear:both;}
 article{   
     -moz-box-shadow:0 0 35px rgba(0,0,0,.4);
@@ -73,11 +75,17 @@ img{vertical-align:middle}
 .rig-cell h3 {font-size:18px;font-family:'Oswald', sans-serif;font-weight:normal;}
 
 /* If have the image layer */
+.PantalonesH-img {
+    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/Pantalones_H.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
+.PolosH-img {
+    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/Polos_H.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
+.medias-img {
+    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/medias.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
 .rig-img {
     display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/bolsos.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
-.rig-img:after{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:1px solid #fff;content:'+';color:white;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);transition:all 0.3s;transform:scale(0);}
+.medias-img:after, .rig-img:after{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:1px solid #fff;content:'+';color:white;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);transition:all 0.3s;transform:scale(0);}
 
-#rig li:hover .rig-img:after {
+#rig li:hover .rig-img:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after{
     opacity:1;
     transform:scale(1);
 }
@@ -116,6 +124,7 @@ img{vertical-align:middle}
 /*Footer Menu*/ 
 .container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}     
 .col-sm-3 {position:relative;min-height:1px;padding-left:15px;padding-right:15px}
+.col-sm-3:hover{background:#ffccff}
 @media (min-width:768px){.col-sm-3 {float:left}.col-sm-3{width:25%}}
 .container-fluid:after{content:" ";display:table}
 .container-fluid:after{clear:both}        
